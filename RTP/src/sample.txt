@@ -1,0 +1,29 @@
+----FTA Application----
+When you run the server, it will just continuously listen at the IP address and port number listed in parentheses until you Ctrl+C to terminate it. This is an example of how you would run it and the output:
+
+C:\Users\nicol\Documents\Github\CS-3251--RTP\src>java FTAServer 5000 1000
+Server is listening... (DESKTOP-U1UIGP1/128.61.119.42, 5000)
+
+----
+When you run the  client, you will be able to enter commands (either 'get <filename>' or disconnect). Below is a sample output that connected with the server that was run using the above command:
+
+C:\Users\nicol\Documents\Github\CS-3251--RTP\src>java FTAClient 128.61.119.42:5000 1000
+Enter 'get <file_name>' or 'disconnect'
+Command: get 3251.jpg
+Enter 'get <file_name>' or 'disconnect'
+Command: get sample.txt
+Enter 'get <file_name>' or 'disconnect'
+Command: disconnect
+
+
+----RDBA Application----
+When you run the server, it will just continuously listen at the IP address and port number listed in parentheses until you Ctrl+C to terminate it. This is an example of how you would run it and the output:
+
+C:\Users\nicol\Documents\Github\CS-3251--RTP\src>java dbengineRTP 6000
+Server is listening... (DESKTOP-U1UIGP1/128.61.119.42, 6000)
+
+----
+When you run the  client, you put the query following the IP address and port number of the server you are trying to connect to. The following is an example of running a dbclient that connected to the server established by running the command above:
+
+C:\Users\nicol\Documents\Github\CS-3251--RTP\src>java dbclientRTP 128.61.119.42:6000 903084074 first_name
+From Server: first_name: Anthony
